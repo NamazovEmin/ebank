@@ -1,0 +1,4 @@
+spring.application.name=ebank
+spring.liquibase.enabled=false
+spring.datasource.driverClassName: org.postgresql.Driver
+spring
