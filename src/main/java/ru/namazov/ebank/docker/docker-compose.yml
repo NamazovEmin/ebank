@@ -1,0 +1,10 @@
+version: "1"
+services:
+  postgres:
+    image: postgres:13.3
+    environment:
+      POSTGRES_DB: ms
+      POSTGRES_USER: emin
+      POSTGRES_PASSWORD: 1111
+    ports:
+      - "5433:5432"
