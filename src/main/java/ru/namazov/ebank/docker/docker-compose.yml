@@ -3,7 +3,7 @@ services:
   postgres:
     image: postgres:13.3
     environment:
-      POSTGRES_DB: ms
+      POSTGRES_DB: ebank
       POSTGRES_USER: emin
       POSTGRES_PASSWORD: 1111
     ports:
