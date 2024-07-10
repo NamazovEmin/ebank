@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-roles
+      author: Namazov
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: ADMIN

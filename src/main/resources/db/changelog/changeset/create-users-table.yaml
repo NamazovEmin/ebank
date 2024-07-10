@@ -24,3 +24,11 @@ databaseChangeLog:
                   type: varchar(25)
                   constraints:
                     nullable: false
+              - column:
+                  name: roles_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk users_role
+                    referencedTableName: roles
+                    referencedColumnNames: id
+                    nullable: false
