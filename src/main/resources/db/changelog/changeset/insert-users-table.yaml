@@ -12,7 +12,4 @@ databaseChangeLog:
               - column:
                   name: password
                   value: marcus
-              - column:
-                  name: roles_id
-                  value: 1
 
