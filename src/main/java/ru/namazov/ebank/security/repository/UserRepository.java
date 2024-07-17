@@ -1,6 +1,5 @@
 package ru.namazov.ebank.security.repository;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,4 +10,5 @@ import ru.namazov.ebank.security.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
+    Optional<User> findUserByLogin(String login);
 }

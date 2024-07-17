@@ -25,6 +25,6 @@ public class Role {
     private String name;
 
     public SimpleGrantedAuthority getAuthority () {
-        return new SimpleGrantedAuthority(this.name);
+        return new SimpleGrantedAuthority("ROLE_" + this.name);
     }
 }

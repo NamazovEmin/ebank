@@ -1,7 +1,10 @@
 package ru.namazov.ebank.security.entity;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -37,4 +40,10 @@ public class User {
             joinColumns=  @JoinColumn(name="user_id", referencedColumnName="id"),
             inverseJoinColumns= @JoinColumn(name="role_id", referencedColumnName="id") )
     private List<Role> roles = new ArrayList<>();
+
+    public Collection<GrantedAuthority> getAuthorities() {
+        Collection<GrantedAuthority> authorities = new ArrayList<>();
+        roles.forEach(role -> authorities.add(role.getAuthority()));
+        return authorities;
+    }
 }
